@@ -4,7 +4,7 @@ from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 from os import curdir, sep
 import cgi
 from urlparse import urlparse, parse_qs
-from JsonHandler import get_users_query, update_user, get_user, get_course_query
+from JsonHandler import get_users_query, update_user, get_user, get_courses_for_school
 from Config import KEY_LIST
 
 
@@ -32,7 +32,7 @@ class myHandler(BaseHTTPRequestHandler):
             elif query_head[0].lower() is "profile":
                 results = get_user(query_components["id"])
             elif query_head[0].lower() is "courses":
-                results = get_course_query(query_components["school"])
+                results = get_courses_for_school(query_components["school"])
         except Exception as e:
             self.send_error(404, 'Unvalid request: %s' % self.path)
             return
