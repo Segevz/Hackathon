@@ -12,8 +12,7 @@ def add_user(query):
 
 
 def get_users_query(query):
-
-    return false
+    return False
 
 
 def get_user(id):
