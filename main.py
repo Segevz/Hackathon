@@ -3,7 +3,12 @@
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 from os import curdir, sep
 import cgi
+from urlparse import urlparse, parse_qs
+import Lists.py
+import
 
+
+KEY_LIST = ["id", "name", "school", "email"]
 PORT_NUMBER = 8080
 
 
@@ -12,8 +17,45 @@ PORT_NUMBER = 8080
 class myHandler(BaseHTTPRequestHandler):
     # Handler for the GET requests
     def do_GET(self):
+        query_components = parse_qs(urlparse(self.path).query)
+        for key in query_components.keys():
+            if key.lower() not in KEY_LIST:
+                self.send_error(404, 'Unvalid request: %s' % self.path)
+                # self.wfile.writelines([key, "    ",query_components.get(key)])
+                # self.wfile.write(self.path)
+                return
+        query_head = self.path.split()[:-1]
+        if query_head[0].lower() is "users":
+            results = ""
+        elif query_head[0].lower() is "courses":
+            results = ""
+        elif query_head[0].lower() is "profile":
+            results = ""
+
+        self.send_response(200)
+        self.send_header('Content-type', 'text/html')
+        self.end_headers()
+        self.wfile.write(results)
+
+
+
+
+
+
+
+
+
+
+
+
+
         if self.path == "/":
-            self.path = "/index_example3.html"
+            self.send_response(200)
+            self.send_header('Content-type', 'text/html')
+            self.end_headers()
+            self.wfile.writelines("dror HOMO")
+            return
+            #self.path = "/index.html"
 
         try:
             # Check the file extension required and
@@ -72,7 +114,7 @@ try:
     server = HTTPServer(('', PORT_NUMBER), myHandler)
     print 'Started httpserver on port ', PORT_NUMBER
 
-    # Wait forever for incoming htto requests
+    # Wait forever for incoming http requests
     server.serve_forever()
 
 except KeyboardInterrupt:
