@@ -5,7 +5,7 @@ from os import curdir, sep
 import cgi
 from urlparse import urlparse, parse_qs
 import Lists.py
-import
+
 
 
 KEY_LIST = ["id", "name", "school", "email"]
