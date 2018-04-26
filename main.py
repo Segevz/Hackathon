@@ -8,7 +8,7 @@ from JsonHandler import get_users_query, update_user, get_user, get_courses_for_
 from Config import KEY_LIST
 
 
-PORT_NUMBER = 8080
+PORT_NUMBER = 80
 
 
 # This class will handles any incoming request from
