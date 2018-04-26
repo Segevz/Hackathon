@@ -1,5 +1,6 @@
 {
-'1':["Infi 1", "Infi 2", "Linear Algebra", "Intro to CS", "Discrete Math"],
-'2':["C Programming","Intro to Java", "Psychology 1", "IOT"],
-'3':["Business 1","Business 2","Business 3","Business 4","Business 5"]
+"1":["Calculus 1", "Calculus 2", "Linear Algebra", "Intro to CS", "Discrete Math"],
+"2":["C Programming","Intro to Java", "Psychology 1", "Machine Learning from data"],
+"3":["Bank Management","Financial Derivatives","Foundations of Law","Business 4","Business 5"],
+"4":["Statistics", "Mathematics", "Probability", "Data Structures"]
 }
