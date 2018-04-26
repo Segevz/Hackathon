@@ -1,28 +1,80 @@
 # -*- coding: utf-8 -*-
+# !/usr/bin/python
+from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+from os import curdir, sep
+import cgi
 
-# Copyright 2016 Google Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-import webapp2
+PORT_NUMBER = 8080
 
 
-class MainPage(webapp2.RequestHandler):
-    def get(self):
-        self.response.headers['Content-Type'] = 'text/plain'
-        self.response.write('Hello, World! This is the first app')
+# This class will handles any incoming request from
+# the browser
+class myHandler(BaseHTTPRequestHandler):
+    # Handler for the GET requests
+    def do_GET(self):
+        if self.path == "/":
+            self.path = "/index_example3.html"
+
+        try:
+            # Check the file extension required and
+            # set the right mime type
+
+            sendReply = False
+            if self.path.endswith(".html"):
+                mimetype = 'text/html'
+                sendReply = True
+            if self.path.endswith(".jpg"):
+                mimetype = 'image/jpg'
+                sendReply = True
+            if self.path.endswith(".gif"):
+                mimetype = 'image/gif'
+                sendReply = True
+            if self.path.endswith(".js"):
+                mimetype = 'application/javascript'
+                sendReply = True
+            if self.path.endswith(".css"):
+                mimetype = 'text/css'
+                sendReply = True
+
+            if sendReply == True:
+                # Open the static file requested and send it
+                f = open(curdir + sep + self.path)
+                self.send_response(200)
+                self.send_header('Content-type', mimetype)
+                self.end_headers()
+                self.wfile.write(f.read())
+                f.close()
+            return
+
+        except IOError:
+            self.send_error(404, 'File Not Found: %s' % self.path)
+
+    # Handler for the POST requests
+    def do_POST(self):
+        if self.path == "/send":
+            form = cgi.FieldStorage(
+                fp=self.rfile,
+                headers=self.headers,
+                environ={'REQUEST_METHOD': 'POST',
+                         'CONTENT_TYPE': self.headers['Content-Type'],
+                         })
+
+            print "Your name is: %s" % form["your_name"].value
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write("Thanks %s !" % form["your_name"].value)
+            return
 
 
-app = webapp2.WSGIApplication([
-    ('/', MainPage),
-], debug=True)
+try:
+    # Create a web server and define the handler to manage the
+    # incoming request
+    server = HTTPServer(('', PORT_NUMBER), myHandler)
+    print 'Started httpserver on port ', PORT_NUMBER
+
+    # Wait forever for incoming htto requests
+    server.serve_forever()
+
+except KeyboardInterrupt:
+    print '^C received, shutting down the web server'
+    server.socket.close()
