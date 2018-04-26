@@ -18,9 +18,11 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="270">
+              <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+              <folding>
+                <element signature="e#43#104#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -32,6 +34,12 @@
               <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
+                <marker date="1524758773221" expanded="true" signature="302:335" ph="..." />
+                <marker date="1524758773221" expanded="true" signature="539:588" ph="..." />
+                <marker date="1524758773221" expanded="true" signature="621:647" ph="..." />
+                <marker date="1524758773221" expanded="true" signature="681:932" ph="..." />
+                <marker date="1524758773221" expanded="true" signature="769:916" ph="..." />
+                <marker date="1524758773221" expanded="true" signature="971:1040" ph="..." />
               </folding>
             </state>
           </provider>
@@ -302,7 +310,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#43#104#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -310,7 +320,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#43#104#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -329,6 +341,12 @@
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+            <marker date="1524758773221" expanded="true" signature="302:335" ph="..." />
+            <marker date="1524758773221" expanded="true" signature="539:588" ph="..." />
+            <marker date="1524758773221" expanded="true" signature="621:647" ph="..." />
+            <marker date="1524758773221" expanded="true" signature="681:932" ph="..." />
+            <marker date="1524758773221" expanded="true" signature="769:916" ph="..." />
+            <marker date="1524758773221" expanded="true" signature="971:1040" ph="..." />
           </folding>
         </state>
       </provider>
@@ -343,9 +361,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="270">
+          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding>
+            <element signature="e#43#104#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
