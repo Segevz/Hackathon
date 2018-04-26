@@ -1,17 +1,17 @@
 import json
 import ast
 import Config
-from Config import USERS_LOC, COURSES_LOC
+from Config import KEY_LIST, USERS_LOC, COURSES_LOC
 # USER
 def add_user(query):
     data = read_json_file(USERS_LOC)
     Config.id+=1
     data[id] = query
-    save_json_file(data)
+    save_to_json(data, USERS_LOC)
 
 
 def get_users_query(query):
-    return false
+    return False
 
 
 def get_user(id):
@@ -25,6 +25,7 @@ def update_user(query):
 
 # COURSE
 def get_course_query(school):
+    queryset = "test"
     return queryset
 
 # SCHOOL
