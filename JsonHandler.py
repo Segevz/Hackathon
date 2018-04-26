@@ -24,6 +24,9 @@ def update_user(query):
 
     return
 
+def get_users_per_course ():
+    all_users = read_json_file("users.json")
+
 # COURSE
 def get_courses_for_school(school):
     all_courses = read_json_file("courses.json")
