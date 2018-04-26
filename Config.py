@@ -5,4 +5,4 @@ USERS_LOC = "C:\\Users\\Fanzone\\Desktop\\users.json"
 SCHOOLS_LOC = "C:\\Users\\Fanzone\\Desktop\\schools.json"
 COURSES_LOC = ""
 id = 0
-KEY_LIST = ["users", "schools", "profile", "update", "courses"]
+KEY_LIST = ["id","users", "schools", "profile", "update", "courses"]
