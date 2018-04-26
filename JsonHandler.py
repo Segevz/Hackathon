@@ -16,17 +16,17 @@ def get_users_query(query):
 
 
 def get_user(id):
-    all_users = read_json_file("C:\\Users\\Fanzone\\Desktop\\users.json")
+    all_users = read_json_file("users.json")
     return all_users.get(id)
 
 def update_user(query):
-    all_users = read_json_file("C:\\Users\\Fanzone\\Desktop\\users.json")
+    all_users = read_json_file("users.json")
 
     return
 
 # COURSE
 def get_courses_for_school(school):
-    all_courses = read_json_file("C:\\Users\\Fanzone\\Desktop\\courses.json")
+    all_courses = read_json_file("courses.json")
     return all_courses.get(school)
 
 # SCHOOL
