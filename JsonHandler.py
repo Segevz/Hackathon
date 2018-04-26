@@ -12,6 +12,7 @@ def add_user(query):
 
 def get_all_users():
     all_users = read_json_file(users.json)
+    return all_users
 
 
 def get_users_query(query):

@@ -5,6 +5,7 @@
 	"email":"aaa@walla.com",
 	"phone": "0542222222",
 	"imageUrl":"www.google.com",
+	"school":"1",
 	"courses":[
 		{
 			"course_id": 0,
@@ -24,6 +25,7 @@
 	"email":"ka@nana.com",
 	"phone": "05422234567",
 	"imageUrl":"www.yahoo.com",
+	"school":"2",
 	"courses":[
 		{
 			"course_id": 3,
@@ -43,6 +45,7 @@
 	"email":"bbb@nana.com",
 	"phone": "05422234567",
 	"imageUrl":"www.yahoo.com",
+	"school":"3",
 	"courses":[
 		{
 			"course_id": 3,
@@ -57,11 +60,12 @@
 		]
 	},
 "4":{
-   "id": 0, 
+   "id": "4",
    "name": "Omri Cohen",
    "email": "omri.cohen1@gmail.com",
    "phone": "0547506362",
    "imageUrl": "https://scontent.fsdv3-1.fna.fbcdn.net/v/t1.0-9/13697023_10208088036850934_8160939702329688373_n.jpg?_nc_cat=0&oh=e78c89b1fc4a8c42933bf10056381835&oe=5B9B4534",
+   "school":"4",
    "courses": [
        {"course_id": 0,
         "price": 20,

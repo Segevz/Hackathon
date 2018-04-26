@@ -1,6 +1,6 @@
 {
-"1":["Calculus 1", "Calculus 2", "Linear Algebra", "Intro to CS", "Discrete Math"],
-"2":["C Programming","Intro to Java", "Psychology 1", "Machine Learning from data"],
-"3":["Bank Management","Financial Derivatives","Foundations of Law","Business 4","Business 5"],
-"4":["Statistics", "Mathematics", "Probability", "Data Structures"]
+"1":[{"id":"0", "name":"Calculus 1"}, {"id":"1", "name":"Calculus 2"}, {"id":"2", "name":"Linear Algebra"}, {"id":"3", "name":"Intro to CS"}, {"id":"4", "name":"Discrete Math"}],
+"2":[{"id":"5", "name":"C Programming"},{"id":"6", "name":"Intro to Java"}, {"id":"7", "name":"Psychology 1"}, {"id":"8", "name":"Machine Learning from data"}],
+"3":[{"id":"9", "name":"Bank Management"},{"id":"10", "name":"Financial Derivatives"},{"id":"11", "name":"Foundations of Law"},{"id":"12", "name":"Business 4"},{"id":"13", "name":"Business 5"}],
+"4":[{"id":"14", "name":"Statistics"}, {"id":"15", "name":"Mathematics"}, {"id":"16", "name":"Probability"}, {"id":"17", "name":"Data Structures"}]
 }
