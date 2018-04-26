@@ -1,10 +1,13 @@
 import json
 import ast
-import Lists
-
+import Config
+from Config import USERS_LOC, COURSES_LOC
 # USER
-def add_user():
-    return false
+def add_user(query):
+    data = read_json_file(USERS_LOC)
+    Config.id+=1
+    data[id] = query
+    save_json_file(data)
 
 
 def get_users_query(query):
@@ -25,7 +28,7 @@ def get_course_query(school):
 
 # SCHOOL
 def get_all_schools():
-    return Lists.schools
+    return Config.schools
 
 
 # JSON

@@ -4,8 +4,8 @@ from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 from os import curdir, sep
 import cgi
 from urlparse import urlparse, parse_qs
-import Lists.py
-import
+import Config
+from JsonHandler import *
 
 
 KEY_LIST = ["id", "name", "school", "email"]
@@ -24,13 +24,15 @@ class myHandler(BaseHTTPRequestHandler):
                 # self.wfile.writelines([key, "    ",query_components.get(key)])
                 # self.wfile.write(self.path)
                 return
-        query_head = self.path.split()[:-1]
+        query_head = self.path.split('/')[1:-1]
         if query_head[0].lower() is "users":
-            results = ""
-        elif query_head[0].lower() is "courses":
-            results = ""
+            results = get_users_query(query_components)
+        elif query_head[0].lower() is "update":
+            results = update_user(query_components)
         elif query_head[0].lower() is "profile":
-            results = ""
+            results = get_user(query_components["id"])
+        elif query_head[0].lower() is "courses":
+            results = get_user(query_components["school"])
 
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
