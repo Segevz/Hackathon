@@ -4,6 +4,8 @@ from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 from os import curdir, sep
 import cgi
 from urlparse import urlparse, parse_qs
+import Lists.py
+
 import Config
 from JsonHandler import *
 
