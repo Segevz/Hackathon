@@ -1,17 +1,19 @@
 import json
 import ast
 import Config
-from Config import KEY_LIST, USERS_LOC, COURSES_LOC
+from Config import USERS_LOC, COURSES_LOC, SCHOOLS_LOC
+
 # USER
 def add_user(query):
-    data = read_json_file(USERS_LOC)
+    data = read_json_file(SCHOOLS_LOC)
     Config.id+=1
     data[id] = query
-    save_to_json(data, USERS_LOC)
+    save_json_file(data, SCHOOLS_LOC)
 
 
 def get_users_query(query):
-    return False
+
+    return false
 
 
 def get_user(id):
@@ -24,9 +26,9 @@ def update_user(query):
     return
 
 # COURSE
-def get_course_query(school):
-    queryset = "test"
-    return queryset
+def get_courses_for_school(school):
+    all_courses = read_json_file("C:\\Users\\Fanzone\\Desktop\\courses.json")
+    return all_courses.get(school)
 
 # SCHOOL
 def get_all_schools():
@@ -44,6 +46,6 @@ def read_json_file(str):
     return data
 
 
-def save_to_json(data, file_path):
-    with open(file_path,'w') as file:
+def save_json_file(data, file_path):
+    with open(file_path, 'w') as file:
         json.dump(data, file)

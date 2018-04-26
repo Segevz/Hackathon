@@ -1,0 +1,24 @@
+{
+"1":{
+	"name":"Nadav Miran",
+	"phone": "0542222222",
+	"email":"aaa@walla.com",
+	"profilePic":"www.google.com",
+	"courses":
+		{
+		"1":"Infi 1",
+		"2":"Discrete"
+		}
+	},
+"2":{
+	"name":"Segev Fogel",
+	"phone": "05422234567",
+	"email":"ka@nana.com",
+	"profilePic":"www.yahoo.com",
+	"courses":
+		{
+		"1":"Infi 5",
+		"2":"Statistics"
+		}
+	}
+}
