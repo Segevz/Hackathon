@@ -10,10 +10,11 @@ def add_user(query):
     data[id] = query
     save_json_file(data, SCHOOLS_LOC)
 
+def get_all_users():
+    pass
 
 def get_users_query(query):
-    return False
-
+    pass
 
 def get_user(id):
     all_users = read_json_file("users.json")
